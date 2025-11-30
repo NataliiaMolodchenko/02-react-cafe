@@ -4,7 +4,7 @@ import CafeInfo from '../CafeInfo/CafeInfo';
 import VoteStats from '../VoteStats/VoteStats';
 import VoteOptions from '../VoteOptions/VoteOptions';
 import Notification from '../Notification/Notification';
-import type { Votes, VotesType } from '../../types/votes';
+import type { Votes, VoteType } from '../../types/votes';
 
 
 
@@ -15,7 +15,7 @@ function App() {
         bad: 0,
     });
 
-    const handleVote = (type: VotesType) => {
+    const handleVote = (type: VoteType) => {
         setVotes((prevVotes) => ({
             ...prevVotes,
             [type]: prevVotes[type] + 1,
